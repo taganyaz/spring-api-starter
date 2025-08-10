@@ -1,0 +1,21 @@
+meta {
+  name: GetSortedInventory
+  type: http
+  seq: 25
+}
+
+get {
+  url: http://localhost:8080/inventory/sort/price
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "productId": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,21 @@
+meta {
+  name: GetFilteredInventory
+  type: http
+  seq: 24
+}
+
+get {
+  url: http://localhost:8080/inventory/filter/price/100/200
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "productId": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+}
