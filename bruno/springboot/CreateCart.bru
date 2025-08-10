@@ -1,0 +1,28 @@
+meta {
+  name: CreateCart
+  type: http
+  seq: 20
+}
+
+post {
+  url: http://localhost:8080/carts
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-auth-token: 1234
+}
+
+body:json {
+  {
+    "name": "Product 10",
+    "description": "-",
+    "price": 245,
+    "categoryId": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+}

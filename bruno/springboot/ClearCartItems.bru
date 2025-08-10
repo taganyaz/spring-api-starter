@@ -1,0 +1,25 @@
+meta {
+  name: ClearCartItems
+  type: http
+  seq: 22
+}
+
+delete {
+  url: http://localhost:8080/carts/8e4035e7-777a-424e-83af-3332ee82bf77/items
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-auth-token: 1234
+}
+
+body:json {
+  {
+    "quantity": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+}

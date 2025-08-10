@@ -1,0 +1,19 @@
+meta {
+  name: GetUsers
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:8080/users?sort=email
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sort: email
+}
+
+settings {
+  encodeUrl: true
+}

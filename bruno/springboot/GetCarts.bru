@@ -1,0 +1,25 @@
+meta {
+  name: GetCarts
+  type: http
+  seq: 16
+}
+
+get {
+  url: http://localhost:8080/carts
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-auth-token: 1234
+}
+
+body:json {
+  {
+    "productId": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+}

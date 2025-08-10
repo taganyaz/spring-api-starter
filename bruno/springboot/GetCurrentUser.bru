@@ -1,0 +1,26 @@
+meta {
+  name: GetCurrentUser
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/auth/validate
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwZXRlckBnbWFpbC5jb20iLCJpYXQiOjE3NTQ3NjgwMjcsImV4cCI6MTc1NDg1NDQyN30.bClYCdKmQEsaqXAL-BJcL1qI5qaD4w9sZP-OJSAa37_dHN6Q1qc9hKeQzVX_Sc1_VeNrBWPVvwLKcBrclTXrGQ
+}
+
+body:json {
+  {
+    "email": "peter@gmail.com",
+    "password": "1238900"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

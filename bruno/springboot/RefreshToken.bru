@@ -1,0 +1,26 @@
+meta {
+  name: RefreshToken
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/auth/validate
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMCIsImVtYWlsIjoicGV0ZXJAZ21haWwuY29tIiwibmFtZSI6IlBldGVyIFdpY2siLCJpYXQiOjE3NTQ3NzI2MDQsImV4cCI6MTc1NDc3MjkwNH0.qxuVT_UocoldmCPDGQfcwNk3q-JZBJnzcmMzCbhPITdMfkA090oOeV_0qz5nZLUaTjVlBjr2sG77gFI-TYjVrw
+}
+
+body:json {
+  {
+    "email": "peter@gmail.com",
+    "password": "1238900"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

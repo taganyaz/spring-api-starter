@@ -1,0 +1,22 @@
+meta {
+  name: UpdateUser
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://localhost:8080/users/11
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "James Kim",
+    "email": "james@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

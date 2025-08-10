@@ -1,0 +1,28 @@
+meta {
+  name: UpdateProduct
+  type: http
+  seq: 14
+}
+
+put {
+  url: http://localhost:8080/products/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-auth-token: 1234
+}
+
+body:json {
+  {
+    "name": "Product 6",
+    "description": "Product 6",
+    "price": 240.99,
+    "categoryId": 11
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: CreateProduct
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://localhost:8080/products
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-auth-token: 1234
+}
+
+body:json {
+  {
+    "name": "Product 12",
+    "description": "-",
+    "price": 245,
+    "categoryId": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}
